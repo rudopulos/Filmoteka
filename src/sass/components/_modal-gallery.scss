@@ -1,0 +1,250 @@
+/* MODAL */
+
+.modal-gallery {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: var(--transition);
+}
+
+.gallery-is-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+// Pana aici nu are nevoie de responsive
+
+// Responsive facut
+
+.frame {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: #fff;
+  width: 280px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 55px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.modal-movie-poster {
+  height: 357px;
+  margin: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.gallery__modal__details {
+  width: 240px;
+}
+
+.modal-movie-title {
+  margin-top: 0;
+  color: #000;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.modal-movie-vote {
+  display: flex;
+  gap: 25px;
+  color: #000;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.modal-movie-popularity {
+  display: flex;
+  gap: 25px;
+  color: #000;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.modal-movie-original-title {
+  display: flex;
+  gap: 25px;
+  color: #000;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 133.333% */
+}
+.modal-movie-genre {
+  display: flex;
+  gap: 25px;
+  color: #000;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 133.333% */
+}
+.modal-movie-overview {
+  padding-right: 20px;
+  height: 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: #000;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+.modal-movie-category {
+  width: 80px;
+  color: #8c8c8c;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 133.333% */
+}
+
+.modal-movie-category-detail {
+  display: inline-block;
+  text-align: center;
+  color: white;
+  width: 36px;
+  height: 16px;
+  border-radius: 5px;
+  background: #b92f2c;
+}
+// Responsive facut
+
+.gallery-buttons-content {
+  gap: 5px;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10px;
+}
+
+.modal-movie-overview-category {
+  margin-bottom: 8px;
+  display: block;
+  color: #000;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 133.333% */
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .frame {
+    flex-direction: column;
+    align-items: center;
+    width: 704px;
+    height: 552px;
+    margin: 0 auto;
+  }
+  .modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+    padding-top: 30px;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+  .modal-movie-poster {
+    height: 373px;
+  }
+  .gallery__modal__details {
+    width: 264px;
+  }
+  .modal-movie-title {
+    margin-top: 0;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .gallery-buttons-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    bottom: 30px;
+    right: 30px;
+    padding-bottom: 0px;
+  }
+  .modal-movie-overview {
+    height: 180px;
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .frame {
+    flex-direction: column;
+    width: 806px;
+    height: 558px;
+    margin: 0 auto;
+  }
+  .modal-content {
+    gap: 16px;
+    padding-top: 40px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .modal-movie-poster {
+    height: 478px;
+  }
+  .gallery__modal__details {
+    width: 391px;
+  }
+  .modal-movie-title {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+  .modal-movie-vote {
+    gap: 50px;
+  }
+  .modal-movie-popularity {
+    gap: 50px;
+  }
+  .modal-movie-original-title {
+    gap: 50px;
+  }
+  .modal-movie-genre {
+    gap: 50px;
+  }
+  .gallery-buttons-content {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    bottom: 40px;
+    right: 96px;
+    padding-bottom: 0px;
+  }
+  .modal-movie-overview {
+    height: 250px;
+  }
+}

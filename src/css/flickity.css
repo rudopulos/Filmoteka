@@ -1,0 +1,69 @@
+/* external css: flickity.css */
+
+.flickity-gallery {
+  position: relative;
+  height: 50%;
+  background: #eee;
+  overflow-x: clip;
+}
+
+.flickity-gallery-cell {
+  width: 28%;
+  margin-right: 10px;
+  background: transparent;
+  counter-increment: gallery-cell;
+}
+
+.flickity-gallery-cell.is-selected {
+  background: transparent;
+}
+.flickity-gallery-cell b {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 70px;
+  line-height: 200px;
+  vertical-align: middle;
+}
+
+.flickity-prev-next-button.next {
+  right: 10px;
+}
+.flickity-prev-next-button.previous {
+  left: 10px;
+}
+.flickity-prev-next-button {
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+.flickity-button {
+  position: absolute;
+  background: hsla(0, 0%, 100%, 0.75);
+  border: none;
+  color: #333;
+}
+.flickity-page-dots {
+  position: absolute;
+  width: 100%;
+  bottom: -50%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  line-height: 1;
+}
+.flickity-page-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #333;
+  border-radius: 50%;
+  opacity: 0.25;
+  cursor: pointer;
+}
+.flickity-page-dots .dot.is-selected {
+  opacity: 1;
+  background: #ff6d00;
+}

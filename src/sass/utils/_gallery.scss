@@ -1,0 +1,115 @@
+.gallery,
+.my-library-gallery {
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  display: flex;
+}
+
+.gallery__items {
+  border-radius: 5px;
+  width: 87%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    scale: 0.95;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    border: 5px solid #b92f2c;
+  }
+}
+
+.gallery__items__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 75px;
+  margin-left: 10px;
+  &--title {
+    margin: 0;
+    color: var(--title-color);
+    font-family: var(--text-font-family);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 120% */
+    text-transform: uppercase;
+  }
+  &--genres {
+    margin-top: 0px;
+    margin-bottom: 0;
+    color: var(--select-color);
+    font-family: var(--text-font-family);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 769px) {
+  .gallery,
+  .my-library-gallery {
+    gap: 32px;
+  }
+  .gallery__items {
+    width: 43%;
+  }
+  .gallery__items__details {
+    height: 75px;
+    &--title {
+      font-size: 12px;
+    }
+    &--genres {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      color: var(--select-color);
+      font-family: var(--text-font-family);
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .gallery__items {
+    width: 32%;
+  }
+  .gallery,
+  .my-library-gallery {
+    width: 95%;
+    gap: 16px;
+  }
+  .gallery__items__details {
+    height: 120px;
+    margin-left: 12px;
+    &--title {
+      margin-top: 12px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+    &--genres {
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 841px) {
+  .gallery__items {
+    width: 48.75%;
+  }
+}
+
+@media screen and (min-width: 1630px) {
+  .gallery__items {
+    max-width: 394px;
+  }
+  .gallery,
+  .my-library-gallery {
+    width: 95%;
+    gap: 16px;
+  }
+}
